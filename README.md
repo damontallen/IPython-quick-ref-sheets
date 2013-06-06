@@ -17,7 +17,7 @@ HTML Help Tables
 
 These HTML versions of the quick reference tables were generated in the IPython 
 notebook. They render correctly in Chrome, but they to not in
-Firefox.  Despite this problem, these HTML files could be modified by someone with
+Firefox.  Despite this problem, for now, these HTML files could be modified by someone with
 more experience to make them a good reference.
 
 PDF Files
