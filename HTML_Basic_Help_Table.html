@@ -1,0 +1,83 @@
+<style>
+ div.Table_0{
+ left:0%; 
+width:576px; 
+ margin-left: 10px;
+ position:absolute;
+}
+</style>
+<style>
+ div.Table_1{
+ left:0%; 
+width:488px; 
+ margin-left: 606px;
+ position:absolute;
+}
+</style>
+<div id="container" style="height_min=800px;width:1104px">
+<div class="Table_0" id="Table0" style="height:auto;min_width:576px;"><table border="1" cellpadding="3" cellspacing="0"  style="border:1px solid black;border-collapse:collapse;">
+<tr><td  style="background-color:lightBlue;"  colspan="2"; ><b>IPython&nbsp--&nbspAn&nbspenhanced&nbspInteractive&nbspPython&nbsp-&nbspQuick&nbspReference&nbspCard</b></td></tr>
+<tr><td colspan="2"; > </td></tr>
+<tr><td >ipython</td><td>Open&nbspIPython&nbspterminal&nbspconsole</td></tr>
+<tr><td >ipython&nbspqtconsole</td><td>Open&nbspIPython&nbspqtconsole</td></tr>
+<tr><td >ipython&nbspnotebook</td><td>Open&nbspIPython&nbspNotebook&nbsp(browser&nbspinterface)</td></tr>
+<tr><td >ipython&nbspnotebook&nbsp--pylab&nbspinline</td><td>Open&nbspIPython&nbspNotebook&nbspwith&nbspinline&nbspgraphs</td></tr>
+<tr><td >ipython&nbspnotebook&nbsp--pylab&nbspqt</td><td>Open&nbspIPython&nbspNotebook&nbspwith&nbsppopup&nbspgraphs</td></tr>
+<tr><td >ipython3</td><td>Use&nbspPython3...</td></tr>
+<tr><td >ipython&nbsp--help-all</td><td>Show&nbspall&nbspIPython&nbspstart&nbspflags</td></tr>
+<tr><td colspan="2"; > </td></tr>
+<tr><td  style="background-color:#D5E0C5;"  colspan="2"; ><b>Within&nbspIPython:</b></td></tr>
+<tr><td colspan="2"; > </td></tr>
+<tr><td   style="border-bottom: 1px solid transparent;"> obj?, obj?? </td><td   style="border-bottom: 1px solid transparent;"> Get help, or more help for object (also works as</tr>
+<tr><td   style="border-top: 1px solid transparent;">   </td><td   style="border-top: 1px solid transparent;"> ?obj, ??obj).</tr>
+<tr><td >?foo.*abc*</td><td>List&nbspnames&nbspin&nbsp'foo'&nbspcontaining&nbsp'abc'&nbspin&nbspthem.</td></tr>
+<tr><td >%magic</td><td>Information&nbspabout&nbspIPython's&nbsp'magic'&nbsp%&nbspfunctions.</td></tr>
+<tr><td colspan="2"; > </td></tr>
+<tr><td colspan="2";   style="border-bottom: 1px solid transparent;">Magic functions are prefixed by % or %%, and typically take their arguments</td></tr>
+<tr><td colspan="2";   style="border-top: 1px solid transparent; border-bottom: 1px solid transparent;">without parentheses, quotes or even commas for convenience.  Line magics take a</td></tr>
+<tr><td colspan="2";   style="border-top: 1px solid transparent;">single % and cell magics are prefixed with two %%.</td></tr>
+<tr><td colspan="2"; > </td></tr>
+<tr><td  style="background-color:#D5E0C5;"  colspan="2"; ><b>Example&nbspmagic&nbspfunction&nbspcalls:</b></td></tr>
+<tr><td colspan="2"; > </td></tr>
+<tr><td >%alias&nbspd&nbspls&nbsp-F</td><td>'d'&nbspis&nbspnow&nbspan&nbspalias&nbspfor&nbsp'ls&nbsp-F'</td></tr>
+<tr><td >alias&nbspd&nbspls&nbsp-F</td><td>Works&nbspif&nbsp'alias'&nbspnot&nbspa&nbsppython&nbspname</td></tr>
+<tr><td >alist&nbsp=&nbsp%alias</td><td>Get&nbsplist&nbspof&nbspaliases&nbspto&nbsp'alist'</td></tr>
+<tr><td >cd&nbsp/usr/share</td><td>Obvious.&nbspcd&nbsp-&#60tab&#62&nbspto&nbspchoose&nbspfrom&nbspvisited&nbspdirs.</td></tr>
+<tr><td >%cd??</td><td>See&nbsphelp&nbspAND&nbspsource&nbspfor&nbspmagic&nbsp%cd</td></tr>
+<tr><td >%timeit&nbspx=10</td><td>time&nbspthe&nbsp'x=10'&nbspstatement&nbspwith&nbsphigh&nbspprecision.</td></tr>
+<tr><td   style="border-bottom: 1px solid transparent;"> x**100 </td><td   style="border-bottom: 1px solid transparent;"> time 'x*100' with a setup of 'x=2**100'; setup code is not</tr>
+<tr><td   style="border-top: 1px solid transparent;">   </td><td   style="border-top: 1px solid transparent;"> counted.  This is an example of a cell magic.</tr>
+<tr><td colspan="2"; > </td></tr>
+</table></div>
+<div class="Table_1" id="Table1" style="height:auto;min_width:488px;"><table border="1" cellpadding="3" cellspacing="0"  style="border:1px solid black;border-collapse:collapse;">
+<tr><td  style="background-color:#D5E0C5;"  colspan="2"; ><b>System&nbspcommands:</b></td></tr>
+<tr><td colspan="2"; > </td></tr>
+<tr><td >!cp&nbspa.txt&nbspb/</td><td>System&nbspcommand&nbspescape,&nbspcalls&nbspos.system()</td></tr>
+<tr><td >cp&nbspa.txt&nbspb/</td><td>after&nbsp%rehashx,&nbspmost&nbspsystem&nbspcommands&nbspwork&nbspwithout&nbsp!</td></tr>
+<tr><td >cp&nbsp${f}.txt&nbsp$bar</td><td>Variable&nbspexpansion&nbspin&nbspmagics&nbspand&nbspsystem&nbspcommands</td></tr>
+<tr><td >files&nbsp=&nbsp!ls&nbsp/usr</td><td>Capture&nbspsytem&nbspcommand&nbspoutput</td></tr>
+<tr><td >files.s,&nbspfiles.l,&nbspfiles.n</td><td>"a&nbspb&nbspc",&nbsp['a','b','c'],&nbsp'a\nb\nc'</td></tr>
+<tr><td colspan="2"; > </td></tr>
+<tr><td  style="background-color:#D5E0C5;"  colspan="2"; ><b>History:</b></td></tr>
+<tr><td colspan="2"; > </td></tr>
+<tr><td >_i,&nbsp_ii,&nbsp_iii</td><td>Previous,&nbspnext&nbspprevious,&nbspnext&nbspnext&nbspprevious&nbspinput</td></tr>
+<tr><td >_i4,&nbsp_ih[2:5]</td><td>Input&nbsphistory&nbspline&nbsp4,&nbsplines&nbsp2-4</td></tr>
+<tr><td >exec&nbsp_i81</td><td>Execute&nbspinput&nbsphistory&nbspline&nbsp#81&nbspagain</td></tr>
+<tr><td >%rep&nbsp81</td><td>Edit&nbspinput&nbsphistory&nbspline&nbsp#81</td></tr>
+<tr><td >_,&nbsp__,&nbsp___</td><td>previous,&nbspnext&nbspprevious,&nbspnext&nbspnext&nbspprevious&nbspoutput</td></tr>
+<tr><td >_dh</td><td>Directory&nbsphistory</td></tr>
+<tr><td >_oh</td><td>Output&nbsphistory</td></tr>
+<tr><td >%hist</td><td>Command&nbsphistory.&nbsp'%hist&nbsp-g&nbspfoo'&nbspsearch&nbsphistory&nbspfor&nbsp'foo'</td></tr>
+<tr><td colspan="2"; > </td></tr>
+<tr><td  style="background-color:#D5E0C5;"  colspan="2"; ><b>Autocall:</b></td></tr>
+<tr><td colspan="2"; > </td></tr>
+<tr><td >f&nbsp1,2</td><td>f(1,2)&nbsp&nbsp#&nbspOff&nbspby&nbspdefault,&nbspenable&nbspwith&nbsp%autocall&nbspmagic.</td></tr>
+<tr><td >/f&nbsp1,2</td><td>f(1,2)&nbsp(forced&nbspautoparen)</td></tr>
+<tr><td >,f&nbsp1&nbsp2</td><td>f("1","2")</td></tr>
+<tr><td >;f&nbsp1&nbsp2</td><td>f("1&nbsp2")</td></tr>
+<tr><td colspan="2"; > </td></tr>
+<tr><td colspan="2";   style="border-bottom: 1px solid transparent;">Remember: TAB completion works in many contexts, not just file names</td></tr>
+<tr><td colspan="2";   style="border-top: 1px solid transparent;">or python names.</td></tr>
+<tr><td colspan="2"; > </td></tr>
+</table></div>
+</div>
