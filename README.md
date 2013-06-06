@@ -10,7 +10,7 @@ The final goal is to have versions that include .png, .html, and .pdf formats.
 Image Files
 ========================
 
-The png image files can bee seen together [here](http://imgur.com/a/gt0jx#0).
+The png image files can be seen together [here](http://imgur.com/a/gt0jx#0).
 
 HTML Help Tables
 ========================
