@@ -32,7 +32,7 @@ Notebook
 ========================
 
 The IPython notebook that generated the HTML files can be viewed [here](http://nbviewer.ipython.org/urls/github.com/damontallen/IPython-quick-ref-sheets/raw/master/Qick_ref_with_library.ipynb). It 
-fist takes the quickref text and converts it to a dictionary that labels the 
+fist takes the quickref text and converts it to a dictionary with labels for 
 title, headings, and comment lines as well as the multiline examples.  A copy of
 the dictionary is saved as a binary pickle and can be downloaded from this git.
 The notebook goes on the generate HTML representations of the quickref text.
