@@ -16,7 +16,7 @@ Image Files
 HTML Help Tables
 ========================
 
-These HTML versions of the quick reference tables were generated in the IPython 
+The HTML versions of the quick reference tables above were generated in the IPython 
 notebook. They render correctly in Chrome, but they to not in
 Firefox.  Despite this problem, for now, these HTML files could be modified by someone with
 more experience to make them a good reference.
@@ -54,3 +54,5 @@ Other Thoughts
 [Another aproach](http://ubuntuone.com/6qEHHRVcJKd53TfEEpsCW1) was taken by Thomas Kluyver in which he manually developed
 a quick referance sheet using Scribus. It looks better than the standard table currently rendered so in the future I 
 would like to switch to that style.  I encourage anyone who wants to make that change, or any other improvements, to do so.
+
+The use of the [webkit](http://www.webkit.org/) library may be a way around using Chrome to generate the png versions.
