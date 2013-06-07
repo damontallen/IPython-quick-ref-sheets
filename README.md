@@ -48,3 +48,9 @@ add the %quickref_file magic command.  Ideally in the future this command will g
 the quick reference file versions.
 
 
+Other Thoughts
+========================
+
+[Another aproach](http://ubuntuone.com/6qEHHRVcJKd53TfEEpsCW1) was taken by Thomas Kluyver manually developing a quick
+referance sheet using Scribus. It looks better than the standard table so in the future I would like to switch to that
+style.  I encourage anyone who wants to make that change or any other imporvements to do so.
