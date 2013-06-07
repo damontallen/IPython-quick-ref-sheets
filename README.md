@@ -25,6 +25,7 @@ more experience to make them a good reference.
 
 <iframe  width="560" height="315" src="https://github.com/damontallen/IPython-quick-ref-sheets/raw/master/HTML_Basic_Help_Table.html"> 
 </iframe>
+<iframe width="560" height="315" src="http://www.youtube.com/embed/EKoxLxzWNOk" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
 
 PDF Files
 ========================
