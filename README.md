@@ -10,8 +10,6 @@ The final goal is to have versions that include .png, .html, and .pdf formats.
 Image Files
 ========================
 
-The current png image files are also hosted on Imgur [here](http://imgur.com/a/gt0jx#0).
-
 ![ScreenShot](https://github.com/damontallen/IPython-quick-ref-sheets/raw/master/Basic_Help.png)
 ![ScreenShot2](https://github.com/damontallen/IPython-quick-ref-sheets/raw/master/Magic_only.png)
 
