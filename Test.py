@@ -86,53 +86,51 @@ def test_empty_comment_check_7():
 
 def test_multiline_start_check():
     """Test that lines are part of commands that span multiple lines are flaged as such"""
-    Lines = ['cmd: info','cmd part 1','cmd part 2', 'cmd part 3', 'info']
-    assert multiline_start_check(Lines, 1, True) == True
+    Lines = ['','cmd: info','\tcmd part 1','\tcmd part 2', 'cmd2: info', 'info']
+    assert multiline_start_check(Lines, 1, False) == True
 
-
-
-def test_check_for_range_multiline():
+def test_check_for_range_multiline():  #RANGE CHECK
     """2 - Test that multi-lines that contain ranges like [2:5] are flagged correctly"""
     Lines = ["", "[2:5]range"]
     assert check_for_range(Lines, 1) == True
     
-#def test_multiline_start_check2():
+#def test_multiline_start_check2(): #A reality check is done prior to assigning a multiline flag
 #    """3 - Test enrties that are just example folowed by the info on the next line are not flaged as multiline"""
 #    Lines = ['cmd: info','cmd part 1:','          cmd part 2', 'cmd part 3', 'info']
-#    assert multiline_start_check(Lines, 1, True) == False
+#    assert multiline_start_check(Lines, 1, False) == False
 
 def test_multiline_start_check3():
     """4 - Test enrties that are have multiple lines of explanation are flaged as multiline"""
     Lines = ['cmd: info','obj?, obj??      : Get help, or more help for object (also works as'
             ,'                   ?obj, ??obj).', 'cmd part 3', 'info']
-    assert multiline_start_check(Lines, 1, True) == True
+    assert multiline_start_check(Lines, 1, False) == True
     
 def test_multiline_start_check4():
     """5  - Test enrties that are not multiple lines are not flaged as such"""
     Lines = ['cmd: info','Test cmd: exlpained','next cmd: exlpained', 'cmd part 3', 'info']
-    assert multiline_start_check(Lines, 1, True) == False
+    assert multiline_start_check(Lines, 1, False) == False
     
 def test_multiline_start_check5():
     """6 - Test enrties that are have multiple lines of explanation are just after an empty line flaged as multiline"""
     Lines = ['','obj?, obj??      : Get help, or more help for object (also works as'
             ,'                   ?obj, ??obj).', 'cmd part 3', 'info']
-    assert multiline_start_check(Lines, 1, True) == True
+    assert multiline_start_check(Lines, 1, False) == True
 
 def test_multiline_start_check6():
-    """7 - Test enrties that right hand entryies are not flagged as a multiline start"""
+    """7 - Test enrties that right hand entries are not flagged as a multiline start"""
     Lines = ['','obj??      : Get help, or more help for object (also works as'
             ,'                   ?obj, ??obj).', 'cmd part 3', 'info']
-    assert multiline_start_check(Lines, 2, True) == False
+    assert multiline_start_check(Lines, 2, False) == False
 
 def test_empty_multiline():
     """Test enrties are empty are not flagged as a multiline start"""
     Lines = ['','','Title', 'cmd part 3', 'info']
-    assert multiline_start_check(Lines, 1, True) == False
+    assert multiline_start_check(Lines, 1, False) == False
     
 def test_markdown_not_multiline():
     """Test enrties are empty are not flagged as a multiline start"""
     Lines = ['','Title', '===============', '']
-    assert multiline_start_check(Lines, 2, True) == False
+    assert multiline_start_check(Lines, 2, False) == False
 
 def test_multiline_example_and_explain():
     """Test enrties that have multiple lines of example and explanation are flagged as a multiline start"""
@@ -140,7 +138,14 @@ def test_multiline_example_and_explain():
             '%%timeit x=2**100',
              "x**100           : time 'x*100' with a setup of 'x=2**100'; setup code is not",
              '                   counted.  This is an example of a cell magic.']
-    assert multiline_start_check(Lines, 1, True) == True
+    assert multiline_start_check(Lines, 1, False) == True
+    
+def test_comments_not_multiline():
+    """Test that comments are not flagged as a multiline start"""
+    Lines = ['',
+            'Remember: TAB completion works in many contexts, not just file names',
+            'or python names.', '']
+    assert multiline_start_check(Lines, 1, True) == False
     
 #range check
     

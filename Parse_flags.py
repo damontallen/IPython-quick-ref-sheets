@@ -54,7 +54,7 @@ def right_column_check(line):
     #line = lines[index]
     return (('\t' in line) or (' '*7 == line[0:7]))
 
-def comment_check(lines, index, in_comment = True):
+def comment_check(lines, index, in_comment = False):
     """This fuinction determines if the line is a comment rather than an example or a subject header"""
     if index >= 0:
         pre_line = lines[index-1]
@@ -88,13 +88,18 @@ def comment_check(lines, index, in_comment = True):
     line = lines[index]
     return ((check0 or check1 or check2 or check3) and check4 and check5 and check6 and exists) 
 
-def multiline_start_check(lines, index, not_in_comments = True):#multiline_check
+def multiline_start_check(lines, index, in_comments = True):#multiline_check
     """This function determines if the current line is actually the start of a multiple line example"""
     try:
         next_line = lines[index+1]
     except:
         next_line = ''
     cur_line = lines[index]
+    if cur_line !="":
+        not_just_cmd = cur_line.strip()[-1]!=':'
+    else:
+        not_just_cmd = True
+    not_in_comments = not in_comments
     not_empty = cur_line.strip() != ''
     not_markdown = '=====' not in cur_line
     parts = patch_range(cur_line)

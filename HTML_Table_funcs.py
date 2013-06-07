@@ -112,7 +112,39 @@ def build_HTML_table(_Dict, Start_key = '', end_key='', max_line=-1, start_later
     #print("Count = {}".format(count))
     return Table
     
-def multiline_List(lines, columns = 2):
+def Table_container(Widths,tables):#, height='auto'
+    """This function assembles a group of tables into one container, arainging them left to right."""
+    Total_width = sum(Widths)+20*len(tables)
+    Container = ''
+    L_px = 10
+    for index, width in enumerate(Widths):
+        style =  '<style>\n div.Table_{}'.format(index)
+        style += '{\n left:0%; \n'
+        style += 'width:{}px; \n margin-left: {}px;\n position:absolute;\n'.format(width, L_px)
+        L_px+=width+20
+        style += '}\n</style>\n'
+        Container+=style
+    Container += '<div id="container" style="height_min=800px;width:{}px">\n'.format(Total_width)#height,
+    for index, stuff in enumerate(zip(Widths, tables)):
+        width, table = stuff
+        Name = 'Table'+str(index)
+        Container += '<div class="Table_{}" id="{}" style="height:auto;min_width:{}px;">{}</div>\n'.format(index, Name, width, table)
+    Container+='</div>'
+    return Container    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+'''def multiline_List(lines, columns = 2):
     """This function handels multi line examples"""
     Row_list=[]
     for line in lines:
@@ -181,5 +213,5 @@ def build_table_list(_Dict, Start_key = '', end_key=''):##
     Table_list += [['','']]
     print("Count = {}".format(count))
     return Table_list
-
+'''
 
