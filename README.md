@@ -51,6 +51,6 @@ the quick reference file versions.
 Other Thoughts
 ========================
 
-[Another aproach](http://ubuntuone.com/6qEHHRVcJKd53TfEEpsCW1) was taken by Thomas Kluyver in which he manually develope a quick
-referance sheet using Scribus. It looks better than the standard table so in the future I would like to switch to that
-style.  I encourage anyone who wants to make that change or any other imporvements to do so.
+[Another aproach](http://ubuntuone.com/6qEHHRVcJKd53TfEEpsCW1) was taken by Thomas Kluyver in which he manually developed
+a quick referance sheet using Scribus. It looks better than the standard table currently rendered so in the future I 
+would like to switch to that style.  I encourage anyone who wants to make that change, or any other improvements, to do so.
