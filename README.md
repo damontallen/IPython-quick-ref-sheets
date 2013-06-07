@@ -12,6 +12,8 @@ Image Files
 
 The current png image files can be seen together [here](http://imgur.com/a/gt0jx#0).
 
+![ScreenShot](https://github.com/damontallen/IPython-quick-ref-sheets/raw/master/Basic_Help.png)
+
 HTML Help Tables
 ========================
 
