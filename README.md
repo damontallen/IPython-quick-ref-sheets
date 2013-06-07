@@ -23,7 +23,8 @@ notebook. They render correctly in Chrome, but they to not in
 Firefox.  Despite this problem, for now, these HTML files could be modified by someone with
 more experience to make them a good reference.
 
-<iframe src="https://github.com/damontallen/IPython-quick-ref-sheets/raw/master/HTML_Basic_Help_Table.html"></iframe>
+<iframe  width="560" height="315" src="https://github.com/damontallen/IPython-quick-ref-sheets/raw/master/HTML_Basic_Help_Table.html"> 
+</iframe>
 
 PDF Files
 ========================
