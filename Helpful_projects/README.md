@@ -14,6 +14,8 @@ This is a list of projects/links I have found useful for quick referance example
 * [Browsercast - embedding audio in a notebook](https://github.com/wolever/browsercast)
 * [Csound Tutorial](http://nbviewer.ipython.org/5535792)
 * [Lectures introducing scientific computing with Python using IPython](https://github.com/jrjohansson/scientific-python-lectures#lectures-on-scientific-computing-with-python)
+* [Webscraping example](http://nbviewer.ipython.org/4743272)
+* [Treating notebooks as a library](http://nbviewer.ipython.org/5491090/analysis.ipynb)
 * [d3js in IPython](http://nbviewer.ipython.org/4484816/ipyD3sample.ipynb)
 * [IPython extension index](https://github.com/ipython/ipython/wiki/Extensions-Index)
 * [IPython dev meetings on hackpad](https://hackpad.com/IPython-dev-meetings-6wTSjJt7TZK)
