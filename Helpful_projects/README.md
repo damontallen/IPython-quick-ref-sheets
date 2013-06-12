@@ -19,3 +19,7 @@ This is a list of projects/links I have found useful for quick referance example
 * [d3js in IPython](http://nbviewer.ipython.org/4484816/ipyD3sample.ipynb)
 * [IPython extension index](https://github.com/ipython/ipython/wiki/Extensions-Index)
 * [IPython dev meetings on hackpad](https://hackpad.com/IPython-dev-meetings-6wTSjJt7TZK)
+
+Interesting Examples
+========================
+* [Motion-activated camera with Raspberry Pi ](http://nbviewer.ipython.org/5588279)
