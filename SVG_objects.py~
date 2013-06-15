@@ -1,0 +1,200 @@
+from __future__ import division
+from IPython.display import SVG
+from numpy import sin, cos, tan, pi, mod
+
+
+
+def SVG_Build(Build_SVG_String, b_r=(200,200)):
+    """This returns the Build_SVG_String with the begining and end string of an 
+    SVG drawing.  "b_r" is a tuple that contains the bottom and right 
+    coordinates to display."""
+    SVG_pic = """<!DOCTYPE html>
+        <html>
+        <head>
+        <title>MathJax in SVG diagram</title>
+        <script type="text/javascript" src="../MathJax/unpacked/MathJax.js? config=TeX-AMS-MML_SVG"></script>
+        </head>
+        <body>
+        <p>"""
+    SVG_pic += """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 """
+    SVG_pic += str(b_r[0]) +" "+str(b_r[1]) + '" version="1.1" height="' + str(b_r[1]) + '">' + """
+    """
+    SVG_pic += Build_SVG_String + """
+    </svg>
+    </p>
+    </body>
+    </html>"""
+    return SVG_pic
+
+
+def Line(x1=0, y1=0, x2=150, y2=150, rgb=(0,0,0), width = 2, b_r=(0,0)):
+    """This returns tuple of a SVG string to draw a straight line, and a tuple 
+    of the current maximum bottom right coordinates.
+    "b_r" is a tuple that contains the current maximum value for the bottom and 
+    right coordinates to display.  This way you can pass the bottom and right 
+    coordinates along until you are ready to build the SVG."""
+    r, g, b = str(rgb[0]), str(rgb[1]), str(rgb[2])
+    SVG_line = "<line "
+    SVG_line += 'x1="' + str(x1) + '" '
+    SVG_line += 'y1="' + str(y1) + '" '
+    SVG_line += 'x2="' + str(x2) + '" '
+    SVG_line += 'y2="' + str(y2) + '" '+"""
+    """
+    SVG_line += 'style="stroke:rgb('+r+","+g+","+b+');'
+    SVG_line += 'stroke-width:' + str(width) + '"/>'
+    bot = max(y1, y2, b_r[0])
+    right = max(x1, x2, b_r[1])
+    return (SVG_line, (bot, right))
+    
+def Rectangle(x=0, y=0, width=150, height=150, fill_rgb=(255,255,255), stroke_width=3, stroke_rgb=(0,0,0), opacity=0, b_r=(0,0)):
+    """This returns a tuple of a SVG string to draw a rectangle and a tuple 
+    of the current maximum bottom right coordinates.
+    "b_r" is a tuple that contains the current maximum value for the bottom and 
+    right coordinates to display.  This way you can pass the bottom and right 
+    coordinates along until you are ready to build the SVG."""
+    fr, fg, fb = str(fill_rgb[0]), str(fill_rgb[1]), str(fill_rgb[2])
+    sr, sg, sb = str(stroke_rgb[0]), str(stroke_rgb[1]), str(stroke_rgb[2])
+    SVG_rec = "<rect "
+    SVG_rec += 'x="' + str(x) + '" '
+    SVG_rec += 'y="' + str(y) + '" '
+    SVG_rec += 'width="'+str(width)+'" '
+    SVG_rec += 'height="'+str(height)+'" '+"""
+    """
+    SVG_rec += 'style="fill:rgb('+fr+','+fg+','+fb+');'
+    SVG_rec += 'stroke-width:'+str(stroke_width)+';'
+    SVG_rec += 'stroke:rgb('+sr+','+sg+','+sb+');'
+    SVG_rec += 'fill-opacity:'+str(opacity)+'"/>'
+    bot = max(y + height, b_r[0])
+    right = max(x + width, b_r[1])
+    return (SVG_rec, (bot, right))
+    
+def Equation(latex_eq = "\\frac{1}{2}", x=0, y=0, height=100, width=100, b_r=(0,0)):
+    """This returns a SVG equation object at a specific location and a tuple
+    of the current maximum bottom right coordinates. """
+    equ ='<foreignObject x="'+str(x)+'" y="'+str(y)+'" width="'+str(width)+'" height="'+str(height)+'">'
+    equ +="""
+            <body xmlns="http://www.w3.org/1999/xhtml">
+              <div style="font-family:Times; font-size:15px">
+               \(\displaystyle{"""+latex_eq+"""}\)
+              </div>
+            </body>
+          </foreignObject>"""
+    b_r = (max(x+width, b_r[0]),max(y+height, b_r[1]))
+    return (equ, b_r)
+    
+def Circle():
+    """This returns a SVG circle object at a specific location and a tuple
+    of the current maximum bottom right coordinates. """
+    cir = """ """
+    pass
+
+def Bez_curve(x0=100, y0=350, tx=150, ty=-300, dx=300, dy=0, width=1, color='blue',b_r=(0,0), suppress=True):
+    """This returns a SVG Bezier curve (path) object at a specific location and a tuple
+    of the current maximum bottom right coordinates. """
+    #cur = """<path d="M 100 350 q 150 -300 300 0" stroke="blue"
+    #stroke-width="5" fill="none" /> """
+    x1 = x0+tx
+    y1 = y0+ty
+    xf = x0 +dx
+    yf = y0 +dy
+    dfx = xf-x1
+    dfy = yf-y1
+    #<path d="M 175 """+"{}".format(y0+ty/2.+bump)+""" l 150 0" stroke="green" stroke-width="1" fill="none" />
+    Cur = '<path d="M {0} {1} q {2} {3} {4} {5}" stroke="{6}" stroke-width="{7}" fill="none" />'.format(x0, y0, tx, ty, dx, dy, color, width)
+    if not suppress:
+        Cur += """<path id="lineAB" d="M """ +"{} {} l {} {}".format(x0, y0, tx, ty)+'" stroke="red" stroke-width="3" fill="none" />'+"""
+        <path id="lineBC" d="M"""+"{} {} l {} {}".format(x1, y1, dfx, dfy)+'" stroke="red" stroke-width="3" fill="none" />'+"""
+        <!--        x0  y0    tx   ty  dx dy -->
+        <!-- Mark relevant points -->
+        <g stroke="black" stroke-width="3" fill="black">
+            <circle id="pointA" """+'cx="{}" cy="{}" r="3" />'.format(x0,y0)+"""
+            <circle id="pointB" """+'cx="{}" cy="{}" r="3" />'.format(x1,y1)+"""
+            <circle id="pointC" """+'cx="{}" cy="{}" r="3" />'.format(xf,yf)+"""
+        </g>
+        <!-- Label the points -->
+        <g font-size="30" font="sans-serif" fill="black" stroke="none" text-anchor="middle">
+            <text """+'x="{}" y="{}" dx="-30">A</text>'.format(x0,y0) +"""
+            <text"""+' x="{}" y="{}" dy="-10">B</text>'.format(x1,y1)+"""
+            <text"""+' x="{}" y="{}" dx="30">C</text>'.format(xf,yf)+"""
+        </g>"""
+    b_r = (max(x0,x1,xf,b_r[0]),max(y0,y1, yf, b_r[1]))
+    return (Cur,b_r)
+
+def location(angle, center=(0,0), radius=100):
+    """This returns the coordinates, (x, y), on a circle for a given angle in degrees."""
+    angle = mod(angle, 360)
+    theta = angle/180.*pi
+    #print(angle, theta)
+    #print(radius*cos(theta))
+    x=round(center[0]+radius*cos(theta))
+    y=round(center[1]-radius*sin(theta))
+    return (x,y)
+    
+
+
+def Curve(Point_0=(0,100), Tan_angle_0=45, Point_1=(100,100), Tan_angle_1=135, width=1, color='black', b_r=(0,0)):
+    """This returns a SVG curve object at a specific location and a tuple
+    of the current maximum bottom right coordinates. The inputs are the curve
+    start location as a tuple, the angle of the initial slop above the 
+    horizontal in degrees (measured CCw), the end location of the curve as a 
+    tuple, and the angle of the final slop above the horizontal in degrees 
+    (measured CCw).  It can also take the width as an positive int, and the 
+    color as a string."""
+    x0, y0 = Point_0
+    dx0, dy0 = location(Tan_angle_0, Point_0)
+    dx1, dy1 = location(Tan_angle_1, Point_1)    
+    x1, y1 = Point_1
+    Cur = '<path d="M {0} {1} C {2} {3} {4} {5} {6} {7}" stroke="{8}" stroke-width="{9}" fill="none" />'.format(x0, y0, dx0, dy0, dx1, dy1, x1, y1,  color, width)
+    b_r=(max(x0,dx0,dx1,x1,b_r[0]),max(y0,dy0,dy1,y1,b_r[1]))
+    return (Cur, b_r)
+
+
+def Polyline():
+    """This returns a SVG polyline object at a specific location and a tuple
+    of the current maximum bottom right coordinates. """
+    pol_l = """ """
+    pass
+
+def Polygon():
+    """This returns a SVG ploygon object at a specific location and a tuple
+    of the current maximum bottom right coordinates. """
+    pol_g = """ """
+    pass
+
+def Ellipse():
+    """This returns a SVG Ellipse object at a specific location and a tuple
+    of the current maximum bottom right coordinates. """
+    ell = """ """
+    pass
+
+def Arrow():
+    """This returns a SVG Arrow object at a specific location and a tuple
+    of the current maximum bottom right coordinates. """
+    Arr = """ """
+    pass
+
+def H_dimension():
+    """This returns a SVG horizontal dimension object at a specific location and
+    a tuple of the current maximum bottom right coordinates. """
+    H_dir = """ """
+    pass
+
+def V_dimension():
+    """This returns a SVG vertical dimension object at a specific location and a
+    tuple of the current maximum bottom right coordinates. """
+    V_dir = """ """
+    pass
+
+
+def SVG_text(x=0, y=0,fill_rgb=(255,255,255), font_size=12,font_style = "normal", font_weight="normal", text="",b_r=(0,0)):
+    """ """"
+    Cur ='<text x="{}" y="{}" fill={} font-size= {} '.format(x,y,fill_rgb,font_size)
+    Cur+='font-style= "{}" font-weight = {}>{}</text>'.format(font_style,font_weight_text)
+    
+    b_r = (max(x,b_r[0]),max(y, b_r[1]))
+    return (Cur,b_r)
+
+
+
+
+
