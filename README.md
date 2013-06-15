@@ -56,3 +56,5 @@ a quick referance sheet using Scribus. It looks better than the standard table c
 would like to switch to that style.  I encourage anyone who wants to make that change, or any other improvements, to do so.
 
 The use of the [webkit](http://www.webkit.org/) library may be a way around using Chrome to generate the png versions.
+
+This [IPython Notebook](http://nbviewer.ipython.org/urls/github.com/damontallen/IPython-quick-ref-sheets/raw/master/SVG_Table_Class-lib%2520test.ipynb) contains experiemntal results building tables from SVG parts.
