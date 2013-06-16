@@ -29,6 +29,7 @@ Audible
 * [Csound Tutorial](http://nbviewer.ipython.org/5535792)
 * [The sound Of Hydrogen]( The sound Of Hydrogen)
 * [Browsercast - embedding audio in a notebook](https://github.com/wolever/browsercast)
+
 Visual
 * [d3js in IPython](http://nbviewer.ipython.org/4484816/ipyD3sample.ipynb)
 * [Learn Pandas (repeated from above)](https://bitbucket.org/hrojas/learn-pandas)
