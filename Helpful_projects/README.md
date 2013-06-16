@@ -33,6 +33,7 @@ Audible
 Visual
 * [d3js in IPython](http://nbviewer.ipython.org/4484816/ipyD3sample.ipynb)
 * [Learn Pandas (repeated from above)](https://bitbucket.org/hrojas/learn-pandas)
+* [Matplotlib Gallery](http://matplotlib.org/gallery.html)
 
 ####More Advanced Programming Education
 * [Treating notebooks as a library](http://nbviewer.ipython.org/5491090/analysis.ipynb)
@@ -49,3 +50,4 @@ Other Resources
 ========================
 * [Python Package Index](https://pypi.python.org/pypi?%3Aaction=browse)
 * [IPython dev meetings on hackpad](https://hackpad.com/IPython-dev-meetings-6wTSjJt7TZK)
+* [IPython sub-reddit](http://www.reddit.com/r/IPython/)
