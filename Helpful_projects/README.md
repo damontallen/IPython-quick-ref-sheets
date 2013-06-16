@@ -12,6 +12,7 @@ This is a list of projects/links I have found useful for quick referance example
 #####Basic Programming Education
 * [Python Programming for the Humanities](https://github.com/fbkarsdorp/python-course#python-programming-for-the-humanities)
 * [Lectures introducing scientific computing with Python using IPython](https://github.com/jrjohansson/scientific-python-lectures#lectures-on-scientific-computing-with-python)
+* [IPython - beyond plain Python](http://nbviewer.ipython.org/urls/raw.github.com/ipython/ipython-in-depth/master/notebooks/IPython%20-%20beyond%20plain%20Python.ipynb)
 
 #####Machine Learning
 * [Machine learning with scikit-learn](http://scikit-learn.org/stable/)
@@ -52,3 +53,5 @@ Other Resources
 * [IPython dev meetings on hackpad](https://hackpad.com/IPython-dev-meetings-6wTSjJt7TZK)
 * [IPython sub-reddit](http://www.reddit.com/r/IPython/)
 * [IPython.org](http://ipython.org/)
+* [IPython in depth - Notebooks](https://github.com/ipython/ipython-in-depth/tree/master/notebooks)
+    * [IPython in-depth: high-productivity interactive and parallel python Lecture (2:48:47)](http://pyvideo.org/video/1652/ipython-in-depth-high-productivity-interactive-a-0)
