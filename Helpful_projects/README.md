@@ -18,12 +18,13 @@ This is a list of projects/links I have found useful for quick referance example
 * [Scikit-learn tutorial](https://github.com/amueller/tutorial_ml_gkbionics#tutorial_ml_gkbionics)
 * [Scikit-image and other scikits](http://scikits.scipy.org/scikits)
 * [SimpleCV computer vision](http://www.reddit.com/r/IPython/comments/1e4ojm/simplecv_computer_vision_tutorial_using_ipython/)
+
 #####Web Scraping and Data Mining
 * [Mining the Social Web, (2nd Edition)](https://github.com/ptwobrussell/Mining-the-Social-Web-2nd-Edition#mining-the-social-web-2nd-edition)
 * [Webscraping example](http://nbviewer.ipython.org/4743272)
 * [Learn Pandas](https://bitbucket.org/hrojas/learn-pandas)
 
-#####Audible and Visual Data Presentation
+#####Data Presentation
 Audible
 * [Csound Tutorial](http://nbviewer.ipython.org/5535792)
 * [The sound Of Hydrogen]( The sound Of Hydrogen)
