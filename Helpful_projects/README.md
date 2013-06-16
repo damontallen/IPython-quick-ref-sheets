@@ -51,3 +51,4 @@ Other Resources
 * [Python Package Index](https://pypi.python.org/pypi?%3Aaction=browse)
 * [IPython dev meetings on hackpad](https://hackpad.com/IPython-dev-meetings-6wTSjJt7TZK)
 * [IPython sub-reddit](http://www.reddit.com/r/IPython/)
+* [IPython.org](http://ipython.org/)
