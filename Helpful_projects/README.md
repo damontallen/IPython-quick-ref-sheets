@@ -1,30 +1,29 @@
 Useful IPython Notebooks and Related Code
 ========================
 
-#####This is a list of projects/links I have found useful for quick referance examples.
+This is a list of projects/links I have found useful for quick referance examples.
 
-###Referances and collections
+####Referances and collections
 * [IPython Official Notebook Collection](https://github.com/ipython/ipython/tree/master/examples/notebooks#a-collection-of-notebooks-for-using-ipython-effectively)
 * [A gallery of interesting IPython Notebooks](https://github.com/ipython/ipython/wiki/A-gallery-of-interesting-IPython-Notebooks)
-* [Markdown Referance](http://daringfireball.net/projects/markdown/)
+* [Markdown Reference](http://daringfireball.net/projects/markdown/)
 
-###Tutorials
-####Basic Programming Education
+####Tutorials
+#####Basic Programming Education
 * [Python Programming for the Humanities](https://github.com/fbkarsdorp/python-course#python-programming-for-the-humanities)
 * [Lectures introducing scientific computing with Python using IPython](https://github.com/jrjohansson/scientific-python-lectures#lectures-on-scientific-computing-with-python)
 
-####Machine Learning
+#####Machine Learning
 * [Machine learning with scikit-learn](http://scikit-learn.org/stable/)
 * [Scikit-learn tutorial](https://github.com/amueller/tutorial_ml_gkbionics#tutorial_ml_gkbionics)
 * [Scikit-image and other scikits](http://scikits.scipy.org/scikits)
 * [SimpleCV computer vision](http://www.reddit.com/r/IPython/comments/1e4ojm/simplecv_computer_vision_tutorial_using_ipython/)
-
-####Web Scraping and Data Mining
+#####Web Scraping and Data Mining
 * [Mining the Social Web, (2nd Edition)](https://github.com/ptwobrussell/Mining-the-Social-Web-2nd-Edition#mining-the-social-web-2nd-edition)
 * [Webscraping example](http://nbviewer.ipython.org/4743272)
 * [Learn Pandas](https://bitbucket.org/hrojas/learn-pandas)
 
-####Audible and Visual Data Presentation
+#####Audible and Visual Data Presentation
 Audible
 * [Csound Tutorial](http://nbviewer.ipython.org/5535792)
 * [The sound Of Hydrogen]( The sound Of Hydrogen)
@@ -35,7 +34,7 @@ Visual
 * [Learn Pandas (repeated from above)](https://bitbucket.org/hrojas/learn-pandas)
 * [Matplotlib Gallery](http://matplotlib.org/gallery.html)
 
-####More Advanced Programming Education
+#####More Advanced Programming Education
 * [Treating notebooks as a library](http://nbviewer.ipython.org/5491090/analysis.ipynb)
 * [IPython extension index](https://github.com/ipython/ipython/wiki/Extensions-Index)
 * [Numba: 1400x Speedup of Python code in a single line](http://jakevdp.github.io/blog/2013/06/15/numba-vs-cython-take-2/)
