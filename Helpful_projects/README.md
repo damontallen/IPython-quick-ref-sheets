@@ -46,6 +46,7 @@ Interesting Examples
 * [Motion-activated camera with Raspberry Pi ](http://nbviewer.ipython.org/5588279)
 * [Plotting Arduino Analog Data in IPython Notebook](http://nbviewer.ipython.org/5721739)
 * [Diplaying Chemical Compounds](http://www.reddit.com/r/IPython/comments/1fxxpj/chemistry_and_the_rdkit_library/)
+* [Carpentry](http://nbviewer.ipython.org/5743962)
 
 Other Resources
 ========================
