@@ -13,6 +13,8 @@ This is a list of projects/links I have found useful for quick referance example
 * [Python Programming for the Humanities](https://github.com/fbkarsdorp/python-course#python-programming-for-the-humanities)
 * [Lectures introducing scientific computing with Python using IPython](https://github.com/jrjohansson/scientific-python-lectures#lectures-on-scientific-computing-with-python)
 * [IPython - beyond plain Python](http://nbviewer.ipython.org/urls/raw.github.com/ipython/ipython-in-depth/master/notebooks/IPython%20-%20beyond%20plain%20Python.ipynb)
+* [Tracebacks - working with error messages](http://nbviewer.ipython.org/4152326/)
+* [Python - the quick tutorial](http://nbviewer.ipython.org/4152314/)
 
 #####Machine Learning
 * [Machine learning with scikit-learn](http://scikit-learn.org/stable/)
