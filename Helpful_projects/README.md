@@ -30,7 +30,7 @@ This is a list of projects/links I have found useful for quick referance example
 #####Data Presentation
 Audible
 * [Csound Tutorial](http://nbviewer.ipython.org/5535792)
-* [The sound Of Hydrogen]( The sound Of Hydrogen)
+* [The sound Of Hydrogen](http://nbviewer.ipython.org/urls/raw.github.com/Carreau/posts/master/07-the-sound-of-hydrogen.ipynb)
 * [Browsercast - embedding audio in a notebook](https://github.com/wolever/browsercast)
 
 Visual
@@ -58,3 +58,4 @@ Other Resources
 * [IPython.org](http://ipython.org/)
 * [IPython in depth - Notebooks](https://github.com/ipython/ipython-in-depth/tree/master/notebooks)
     * [IPython in-depth: high-productivity interactive and parallel python Lecture (2:48:47)](http://pyvideo.org/video/1652/ipython-in-depth-high-productivity-interactive-a-0)
+* [IPython Ubuntu PPA](https://launchpad.net/%7Ejtaylor/+archive/ipython)
