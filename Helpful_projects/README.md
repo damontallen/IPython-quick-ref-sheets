@@ -42,6 +42,7 @@ Visual
 * [Treating notebooks as a library](http://nbviewer.ipython.org/5491090/analysis.ipynb)
 * [IPython extension index](https://github.com/ipython/ipython/wiki/Extensions-Index)
 * [Numba: 1400x Speedup of Python code in a single line](http://jakevdp.github.io/blog/2013/06/15/numba-vs-cython-take-2/)
+* [Python Descriptors Demystified](http://nbviewer.ipython.org/urls/gist.github.com/ChrisBeaumont/5758381/raw/descriptor_writeup.ipynb)
 
 Interesting Examples
 ========================
