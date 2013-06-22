@@ -60,3 +60,4 @@ Other Resources
 * [IPython in depth - Notebooks](https://github.com/ipython/ipython-in-depth/tree/master/notebooks)
     * [IPython in-depth: high-productivity interactive and parallel python Lecture (2:48:47)](http://pyvideo.org/video/1652/ipython-in-depth-high-productivity-interactive-a-0)
 * [IPython Ubuntu PPA](https://launchpad.net/%7Ejtaylor/+archive/ipython)
+* [Git tutorial](http://nbviewer.ipython.org/urls/github.com/fperez/reprosw/raw/master/Version%2520Control.ipynb)
