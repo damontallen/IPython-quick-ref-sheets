@@ -62,15 +62,15 @@ def build_HTML_table(_Dict, Start_key = '', end_key='', max_line=-1, start_later
             skip_line = start_later > start_count and start_later>0
             if not skip_line:
                 if sub_entries['_type_'] == 'Title':
-                    color = 'lightBlue'
+                    color = 'lightBlue'#'00FFFF'#
                     count +=2
                 else:
-                    color = '#D5E0C5'
+                    color = '#D5E0C5'#'99FF99'#(213,224,197)
                     count +=2
                     if not Just_now:
                         Table+='<tr><td colspan="2"; > </td></tr>\n'
                         count +=1
-                background = '  style="background-color:'+color+';" '
+                background = '  style="background-color:'+color+';" ' #background-color
                 Table += "<tr><td"+background+' colspan="2"; ><b>'
                 Table += label+"</b></td></tr>\n"
                 Table += '<tr><td colspan="2"; > </td></tr>\n'
