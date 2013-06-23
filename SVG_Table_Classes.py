@@ -31,6 +31,7 @@ def SVG_text(TL=(0,0), font_size=12, height=16, text='', font_color=(0,0,0), fon
     x,y = TL
     if '\n' in text:
         y+=font_size+1
+        #print(TL)
     else:
         y+=int(floor((height+font_size)/2))-1
     x += round(font_size/2) + x_shift
@@ -44,17 +45,17 @@ def SVG_text(TL=(0,0), font_size=12, height=16, text='', font_color=(0,0,0), fon
     Text_list = ['<text x="{}" '.format(x),
                  'y="{}" '.format(y),
                  'font-size= "{}" '.format(font_size),
-                 'font-weight = "{}"'.format(font_weight),
+                 'font-weight = "{}" '.format(font_weight),
                  'style="fill:rgb{}">'.format(font_color),
                  list_of_text[0]]
-    Text_list+=add_list
+    Text_list+=add_list#+['\n']
     Text_list+=['</text>\n'] 
-    return " ".join(Text_list)
+    return "".join(Text_list)
 
 def Set_SVG_view(width, height, svg_display_text):
     """This function sets the viewbox and the height of an SVG object."""
-    text = '<SVG viewBox="0 0 {width} {height}" height="{height}">'.format(width=width, height=height)
-    text+=svg_display_text+'</SVG>'
+    text = '<svg viewBox="0 0 {width} {height}" height="{height}">\n'.format(width=width, height=height)
+    text+=svg_display_text+'</svg>'
     return(text)
 
 
@@ -96,10 +97,10 @@ class SVG_Text_obj(object):
     def check_font_size(self, size):
         """This method validates size and returns it"""
         try:
-            assert(size>3 and size == int(size))
+            assert(size>=3 and size == int(size))
             return size
         except:
-            raise(RuntimeError("Font size must be an integer greater then 3.")) 
+            raise(RuntimeError("Font size must be an integer 3 or greater.")) 
     
     def check_color(self, color):
         """This method is used to set the color of color_to_set or raise an error if
@@ -114,7 +115,19 @@ class SVG_Text_obj(object):
         """The method determines the minimum height based on the font_size 
            and the with of the lines on top and bottom.  Returns the greater 
            of set_height and the minimum height to set_height."""
-        min_height = font_size+2*border_width+2
+        try:
+            row_count=len(self.text.split('\n'))#+1
+            #print("Here now and row_count is %d"% row_count)
+            if row_count<1:
+                row_count=1
+        except:
+            #print("An error occured")
+            row_count=1
+            pass
+        min_height = row_count*(font_size+2*border_width)+2
+        #print("min_height = %d"% min_height)
+        #print("Height to check is %d" % height_to_check)
+        
         return max(min_height, height_to_check)
         
         
@@ -126,7 +139,8 @@ class SVG_Text_obj(object):
         self.__height__ = self.check_height(self.__font_size__, border_width, self.__height__)
         
     def set_height(self, height):
-        self.__height__ = self.check_height(self.__font_size__, border_width, self.__height__)
+        #print("here")
+        self.__height__ = self.check_height(self.__font_size__, self.line_width, height)
         
     
     def get_SVG_text(self):
@@ -138,7 +152,7 @@ class Table_Header(SVG_Text_obj):
     """This is a header object for the top row of a table.  If the header text using 
        the set_header_text (or this is created with the header text) the header will
        be set to show (self.Show_header = True)."""
-    def __init__(self, text="", bordercolor=(0,0,0), height=30, size=14, font_color=(0,0,0), background=(255,255,255), line_width=1, TL=(0,0), width=100):
+    def __init__(self, text="", bordercolor=(0,0,0), height=25, size=14, font_color=(0,0,0), background=(255,255,255), line_width=1, TL=(0,0), width=100):
         """Initiailize"""
         super().__init__(text, size, font_color, "bold", line_width, TL)
         self.Show_header = False
@@ -165,7 +179,8 @@ class Table_Header(SVG_Text_obj):
         if self.Show_header:
             rect_obj = rectangle()
             rect_obj.top_left = self.Top_left
-            rect_obj.bottom_right = [self.Header_width,self.__height__]
+            BR=[self.Header_width+self.Top_left[0],self.__height__]
+            rect_obj.bottom_right = BR
             rect_obj.background = self.Header_background
             rect_obj.border_color = self.Header_border_color
             rect_obj.line_width = self.line_width
@@ -177,6 +192,7 @@ class Table_Header(SVG_Text_obj):
             return ""
 
 class Table_rows(SVG_Text_obj):
+    #__Count__=0
     def __init__(self, font_size=12, line_width=1, top_left=(0,0), text_list=[], width=100, font_color=(0,0,0), background=(255,255,255), border_color=(0,0,0)):
         """Initiailize"""
         super().__init__("", font_size, font_color, "normal", line_width, top_left)
@@ -213,14 +229,18 @@ class Table_rows(SVG_Text_obj):
     
     @property
     def bottom(self):
-        return self.line_width+(self.__height__)*self.__count__+self.Top_left[1]-1
+        return (self.line_width+self.__height__)*self.__count__+self.Top_left[1]
     
     def set_text_list(self, text_list):
         """This method first validates the text_list then sets the internal text_list and updates 
            the row count."""
         self.__text_list__ = self.check_text_list(text_list)
         self.set_count(self.__count__)
-        self.__set_column_locations__(self.column_locations)
+        try:
+            if self.column_locations[0]<0:
+                self.column_locations=[0]
+        except:
+            self.column_locations=[0]
         self.Show_rows = True
     
     def set_count(self, count):
@@ -236,7 +256,7 @@ class Table_rows(SVG_Text_obj):
         """This method sets the vertical dividers and text placement of the columns in the table."""
         try:
             assert(max(locations)<=self.row_width+self.Top_left[0])
-            assert(min(locations)>=self.Top_left[0])
+            assert(min(locations)>=0)#+self.Top_left[0]>=0)
             if len(locations)<len(self.__text_list__[0]):
                 more = len(self.__text_list__[0])-len(locations)
                 step = 10
@@ -245,6 +265,7 @@ class Table_rows(SVG_Text_obj):
                 locations+=list(range(start, stop, step))
             self.__column_locations__=locations
         except:
+            print(locations)
             raise(RuntimeError("Column locations must all be greater than or equal to zero and be less than or equal to the row width."))
         
     def get_SVG_rows(self):
@@ -254,7 +275,10 @@ class Table_rows(SVG_Text_obj):
             except:
                 columns = 1
             TL = list(self.Top_left)
-            BR = [self.row_width,self.__height__]
+            #self.check_height(self.__font_size__, self.line_width)            
+            row_height=self.__height__+self.__count__*self.line_width
+
+            BR = [self.row_width+TL[0],row_height]
             rect_obj = rectangle()
             rect_obj.top_left = TL
             rect_obj.bottom_right = BR
@@ -262,26 +286,56 @@ class Table_rows(SVG_Text_obj):
             rect_obj.border_color = self.row_border_color
             rect_obj.line_width = self.line_width
             Text = ""
+            
             for row in range(self.__count__):
-                Text += draw_rec(rect_obj)
+                #Text += draw_rec(rect_obj)
                 try:
                     row_text = self.__text_list__[row]
+                    #this is to check for a minimum number of column locations
+                    if len(self.column_locations)<len(row_text):
+                        print("column_locations are not set, using defaults")
+                        self.column_locations = list(range(0,(len(row_text))*20,20))
+                        #print(self.column_locations)
+                    #print(column_count)
+                    for self.text in row_text: #Set row height to the height of the tallest entry in that row
+                        self.__height__=self.check_height(self.__font_size__, self.line_width, self.__height__)     
+                    row_height=self.__height__+self.__count__*self.line_width
+                    BR[1]=row_height
+                    rect_obj.bottom_right = BR
+                    Text += draw_rec(rect_obj)
                     Top_left = list(TL)
                     for self.text, x_local in zip(row_text, self.__column_locations__):
+                        if x_local<TL[0]:
+                            print(x_local)
                         Top_left[0]=x_local
-                        Text += SVG_text(Top_left, self.__font_size__, self.__height__, self.text, 
+                        Text += SVG_text(Top_left, self.__font_size__, row_height, self.text, 
                                          self.font_color, self.font_weight, self.x_shift)
-                except:
-                    pass
-                TL[1]+=self.__height__
+                except: #there was no row text so draw an empty rectangle
+                    Text += draw_rec(rect_obj)
+                TL[1]+=row_height
             bottom = TL[1]+self.line_width
             top = self.Top_left[1]+self.line_width
+            
             for hor_local in self.__column_locations__:
+                if hor_local<=TL[0]:
+                    continue
                 line = '<line x1="{0}" y1="{1}" x2="{0}" y2="{2}" '.format(hor_local, top, bottom)
-                line +='style="stroke:rgb{0};stroke-width:{1}"/>\n'.format(self.row_border_color, self.line_width)
+                line +='style="stroke:rgb{0}; stroke-width:{1}"/>\n'.format(self.row_border_color, self.line_width)
                 Text+=line
             return Text 
         else:
             return ""
 
 
+def clean_text(text):
+    """This function replaces problem characters with HTML friendly characters """
+    if '<' in text or '>' in text: #allow for the display of <n> and <tab>
+        text = text.replace('<','&lt;')#'&#60')
+        text = text.replace('>','&gt;')#'&#62')
+    if '$' in text: #ensure that $ renders as a $
+        #$ will render correctly when viewed in a browser but not
+        #using IPython.display.HTML
+        pass
+    #text=text.replace(" ",'&nbsp')
+    text= text.strip('\b')
+    return text

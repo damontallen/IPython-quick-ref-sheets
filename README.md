@@ -13,6 +13,12 @@ Image Files
 ![ScreenShot](https://github.com/damontallen/IPython-quick-ref-sheets/raw/master/Basic_Help.png)
 ![ScreenShot2](https://github.com/damontallen/IPython-quick-ref-sheets/raw/master/Magic_only.png)
 
+SVG Images
+========================
+
+![Basic_Help.svg]()
+![Magic_only.svg]()
+
 HTML Help Tables
 ========================
 
