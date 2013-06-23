@@ -17,6 +17,7 @@ SVG Images
 ========================
 
 <img src="https://github.com/damontallen/IPython-quick-ref-sheets/raw/master/Basic_Help.svg">
+
 <img src="https://github.com/damontallen/IPython-quick-ref-sheets/raw/master/Magic_only.svg">
 
 HTML Help Tables
