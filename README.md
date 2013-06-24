@@ -16,7 +16,11 @@ Image Files
 SVG Images
 ========================
 
+###Basic Commands
+
 ![Basic help](http://damontallen.github.io/IPython-quick-ref-sheets/svg/Basic_Help.svg)
+
+###Magic Commands
 ![Magic help](http://damontallen.github.io/IPython-quick-ref-sheets/svg/Magic_only.svg)
 
 The Ipython Notebook use to develope the SVG images is [here](http://nbviewer.ipython.org/urls/raw.github.com/damontallen/IPython-quick-ref-sheets/master/SVG_Table_Builder.ipynb).
