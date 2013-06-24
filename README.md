@@ -18,6 +18,7 @@ SVG Images
 
 The SVG files above render correctly for me and are embedded in [this github.io page](http://damontallen.github.io/IPython-quick-ref-sheets/).
 The problem is that I haven't figured out how to make that page render without borders yet...
+![Basic help](http://damontallen.github.io/IPython-quick-ref-sheets/svg/Basic_Help.svg)
 
 HTML Help Tables
 ========================
