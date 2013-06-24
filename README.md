@@ -16,8 +16,8 @@ Image Files
 SVG Images
 ========================
 
-![Alt Basic_Help.svg](https://github.com/damontallen/IPython-quick-ref-sheets/raw/gh-pages/SVG_basic.svg)
-<img src="https://github.com/damontallen/IPython-quick-ref-sheets/raw/gh-pages/SVG_basic.svg">
+![Alt Basic_Help.svg](http://www.mediafire.com/download/1u5c7d6i7f4xf8d/Basic_Help.svg)
+<img src="http://www.mediafire.com/download/1u5c7d6i7f4xf8d/Basic_Help.svg">
 
 ![Alt Magic_only.svg](https://github.com/damontallen/IPython-quick-ref-sheets/raw/master/Magic_only.svg)
 <img src="https://github.com/damontallen/IPython-quick-ref-sheets/raw/master/Magic_only.svg">
