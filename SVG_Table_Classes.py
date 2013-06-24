@@ -9,6 +9,7 @@ class rectangle(object):
         self.border_color = (0,0,0)#border color
         self.line_width = 1 #line width
 
+
 def draw_rec(rect_obj):
     BR = rect_obj.bottom_right
     TL = rect_obj.top_left
@@ -21,12 +22,12 @@ def draw_rec(rect_obj):
                     'style="',
                     'fill:rgb{};'.format(back),
                     'stroke:rgb{};'.format(stroke_clr),
-                    'stroke-width:{}" '.format(lin_width),
+                    'stroke-width:{}" '.format(lin_width), 
                     'x="{}" '.format(TL[0]+lin_width),
                     'y="{}" />\n'.format(TL[1]+lin_width)]
     return ' '.join(svc_rec_list)
 
-def SVG_text(TL=(0,0), font_size=12, height=16, text='', font_color=(0,0,0), font_weight='normal', x_shift=0):
+def SVG_text(TL=(0,0), font_size=12, height=16, text='', font_color=(0,0,0), font_weight='normal', x_shift=0, font_family="Arial"):
     """This function generates the SVG text to display text.  It also supports multiple line text is \n is in the text"""
     x,y = TL
     if '\n' in text:
@@ -46,7 +47,8 @@ def SVG_text(TL=(0,0), font_size=12, height=16, text='', font_color=(0,0,0), fon
                  'y="{}" '.format(y),
                  'font-size= "{}" '.format(font_size),
                  'font-weight = "{}" '.format(font_weight),
-                 'style="fill:rgb{}">'.format(font_color),
+                 'style="fill:rgb{}" '.format(font_color),
+                 'font-family="{}">'.format(font_family),
                  list_of_text[0]]
     Text_list+=add_list#+['\n']
     Text_list+=['</text>\n'] 
@@ -54,7 +56,7 @@ def SVG_text(TL=(0,0), font_size=12, height=16, text='', font_color=(0,0,0), fon
 
 def Set_SVG_view(width, height, svg_display_text):
     """This function sets the viewbox and the height of an SVG object."""
-    text = '<svg viewBox="0 0 {width} {height}" height="{height}">\n'.format(width=width, height=height)
+    text = '<svg viewBox="0 0 {width} {height}" height="{height}" xmlns="http://www.w3.org/2000/svg" version="1.1">\n'.format(width=width, height=height)
     text+=svg_display_text+'</svg>'
     return(text)
 
@@ -62,7 +64,7 @@ def Set_SVG_view(width, height, svg_display_text):
 
 class SVG_Text_obj(object):
     """This is a base class for handeling text objects"""
-    def __init__(self, text="", font_size=12, font_color=(0,0,0), font_weight="normal", border_width=1, TL=(0,0)):
+    def __init__(self, text="", font_size=12, font_color=(0,0,0), font_weight="normal", border_width=1, TL=(0,0), font_family="Arial"):
         """Initiailize"""
         self.line_width = self.check_line_width(border_width)
         self.font_weight = self.check_font_weight(font_weight)
@@ -71,6 +73,7 @@ class SVG_Text_obj(object):
         self.__height__ = self.check_height(self.__font_size__, self.line_width)
         self.text = text
         self.Top_left = TL
+        self.font_family=font_family
 
 
    
@@ -144,7 +147,7 @@ class SVG_Text_obj(object):
         
     
     def get_SVG_text(self):
-        return SVG_text(self.Top_left, self.__font_size__, self.__height__, self.text, self.font_color, self.font_weight)
+        return SVG_text(self.Top_left, self.__font_size__, self.__height__, self.text, self.font_color, self.font_weight, font_family=self.font_family)
         
 
 
@@ -152,15 +155,16 @@ class Table_Header(SVG_Text_obj):
     """This is a header object for the top row of a table.  If the header text using 
        the set_header_text (or this is created with the header text) the header will
        be set to show (self.Show_header = True)."""
-    def __init__(self, text="", bordercolor=(0,0,0), height=25, size=14, font_color=(0,0,0), background=(255,255,255), line_width=1, TL=(0,0), width=100):
+    def __init__(self, text="", bordercolor=(0,0,0), height=25, size=14, font_color=(0,0,0), background=(255,255,255), line_width=1, TL=(0,0), width=100, font_family="Arial"):
         """Initiailize"""
-        super().__init__(text, size, font_color, "bold", line_width, TL)
+        super().__init__(text, size, font_color, "bold", line_width, TL, font_family)
         self.Show_header = False
         self.Header_width = width
         self.set_header_text(text)
         self.__height__ = self.check_height(self.__font_size__, self.line_width, height)
         self.Header_border_color = self.check_color(bordercolor)
         self.Header_background = self.check_color(background)
+
     
     def set_header_text(self, text=""):
         """This method let the user set the text of the header of the table.  By default if the text is set then the
@@ -186,16 +190,16 @@ class Table_Header(SVG_Text_obj):
             rect_obj.line_width = self.line_width
             Text = draw_rec(rect_obj)
             Text += SVG_text(self.Top_left, self.__font_size__, self.__height__, self.text, 
-                             self.font_color, self.font_weight)
+                             self.font_color, self.font_weight, font_family=self.font_family)
             return Text 
         else:
             return ""
 
 class Table_rows(SVG_Text_obj):
     #__Count__=0
-    def __init__(self, font_size=12, line_width=1, top_left=(0,0), text_list=[], width=100, font_color=(0,0,0), background=(255,255,255), border_color=(0,0,0)):
+    def __init__(self, font_size=12, line_width=1, top_left=(0,0), text_list=[], width=100, font_color=(0,0,0), background=(255,255,255), border_color=(0,0,0),font_family="Arial"):
         """Initiailize"""
-        super().__init__("", font_size, font_color, "normal", line_width, top_left)
+        super().__init__("", font_size, font_color, "normal", line_width, top_left, font_family)
         self.row_width = width
         self.__column_locations__ = [0]
 
@@ -206,6 +210,7 @@ class Table_rows(SVG_Text_obj):
         self.row_border_color = self.check_color(border_color)
         self.row_background = self.check_color(background)
         self.x_shift=0
+        
  
     def check_text_list(self, text_list=[]):
         """This method validates that every element in the text_list is a list of equal lenght"""
@@ -309,7 +314,7 @@ class Table_rows(SVG_Text_obj):
                             print(x_local)
                         Top_left[0]=x_local
                         Text += SVG_text(Top_left, self.__font_size__, row_height, self.text, 
-                                         self.font_color, self.font_weight, self.x_shift)
+                                         self.font_color, self.font_weight, self.x_shift, self.font_family)
                 except: #there was no row text so draw an empty rectangle
                     Text += draw_rec(rect_obj)
                 TL[1]+=row_height
