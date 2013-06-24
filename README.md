@@ -16,11 +16,8 @@ Image Files
 SVG Images
 ========================
 
-![Alt Basic_Help.svg](http://www.mediafire.com/download/1u5c7d6i7f4xf8d/Basic_Help.svg)
-<img src="http://www.mediafire.com/download/1u5c7d6i7f4xf8d/Basic_Help.svg">
-
-![Alt Magic_only.svg](https://github.com/damontallen/IPython-quick-ref-sheets/raw/master/Magic_only.svg)
-<img src="https://github.com/damontallen/IPython-quick-ref-sheets/raw/master/Magic_only.svg">
+The SVG files above render correctly for me and are embedded in [this github.io page](http://damontallen.github.io/IPython-quick-ref-sheets/).
+The problem for me is that I haven't figured out how to make that page render without borders yet...
 
 HTML Help Tables
 ========================
