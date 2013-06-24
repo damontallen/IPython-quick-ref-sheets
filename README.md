@@ -5,7 +5,7 @@ This is ongoing work developing quick reference sheets for IPython.  It is an
 attempt to make several versions of the %quickref IPython magic output for ease
 of access.
 
-The final goal is to have versions that include .png, .html, and .pdf formats.
+The final goal is to have versions that include .png, .html, .svg, and .pdf formats.
 
 Image Files
 ========================
@@ -16,10 +16,13 @@ Image Files
 SVG Images
 ========================
 
-The SVG files above render correctly for me and are embedded in [this github.io page](http://damontallen.github.io/IPython-quick-ref-sheets/).
-The problem is that I haven't figured out how to make that page render without borders yet...
 ![Basic help](http://damontallen.github.io/IPython-quick-ref-sheets/svg/Basic_Help.svg)
 ![Magic help](http://damontallen.github.io/IPython-quick-ref-sheets/svg/Magic_only.svg)
+
+The Ipython Notebook use to develope the SVG images is [here](http://nbviewer.ipython.org/urls/raw.github.com/damontallen/IPython-quick-ref-sheets/master/SVG_Table_Builder.ipynb).
+However, the libraries that that notebook referances are only in this git page.
+
+(FYI The SVG files above are embedded together in [this github.io page](http://damontallen.github.io/IPython-quick-ref-sheets/).)
 
 HTML Help Tables
 ========================
@@ -28,6 +31,7 @@ The HTML versions of the quick reference tables above were generated in the IPyt
 notebook. They render correctly in Chrome, but they to not in
 Firefox.  Despite this problem, for now, these HTML files could be modified by someone with
 more experience to make them a good reference.
+(I believe this is due to not specifying the font family.)
 
 PDF Files
 ========================
