@@ -15,6 +15,7 @@ This is a list of projects/links I have found useful for quick referance example
 * [IPython - beyond plain Python](http://nbviewer.ipython.org/urls/raw.github.com/ipython/ipython-in-depth/master/notebooks/IPython%20-%20beyond%20plain%20Python.ipynb)
 * [Tracebacks - working with error messages](http://nbviewer.ipython.org/4152326/)
 * [Python - the quick tutorial](http://nbviewer.ipython.org/4152314/)
+* [An introduction to NumPy](http://nbviewer.ipython.org/url/mentat.za.net/numpy/pydata/pydata2012_nyc_numpy.ipynb)
 
 #####Machine Learning
 * [Machine learning with scikit-learn](http://scikit-learn.org/stable/)
