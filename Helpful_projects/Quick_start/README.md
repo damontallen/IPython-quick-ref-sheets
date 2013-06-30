@@ -11,3 +11,5 @@ Additionally, you will have to manually change the appearance of the icons of
 the shortcuts.  This is done by right clicking on the icon->properties->click on 
 the current icon and slect a new one.  Two icons images are among the files 
 here.
+
+(Still needs work buts gets most of the bit stuff.)
