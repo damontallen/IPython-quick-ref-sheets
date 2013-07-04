@@ -17,6 +17,7 @@ This is a list of projects/links I have found useful for quick referance example
 * [Python - the quick tutorial](http://nbviewer.ipython.org/4152314/)
 * [An introduction to NumPy](http://nbviewer.ipython.org/url/mentat.za.net/numpy/pydata/pydata2012_nyc_numpy.ipynb)
 * [A Crash Course in Python for Scientists](http://nbviewer.ipython.org/5920182)
+    * [...for IPython3](http://nbviewer.ipython.org/5924718)
 
 #####Machine Learning
 * [Machine learning with scikit-learn](http://scikit-learn.org/stable/)
