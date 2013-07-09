@@ -2,6 +2,7 @@
 echo "Adding IPython Stable repository"
 echo
 sudo add-apt-repository ppa:jtaylor/ipython
+sudo add-apt-repository ppa:takluyver/python3
 sudo apt-get update --assume-yes
 echo
 echo "Installing Python, Python3, and all versions of IPython"
