@@ -9,6 +9,8 @@ echo "Installing Python, Python3, and all versions of IPython"
 echo
 sudo apt-get install python --assume-yes
 sudo apt-get install python3 --assume-yes
+sudo apt-get install python-zmq --assume-yes
+sudo apt-get install python3-zmq --assume-yes
 sudo apt-get install python3-dev --assume-yes
 sudo apt-get install python-pip --assume-yes
 sudo apt-get install python3-pip --assume-yes
@@ -54,4 +56,10 @@ echo "Installing mercurial"
 echo
 sudo apt-get install mercurial --assume-yes
 sudo apt-get install hg --assume-yes
+echo
+echo "Be sure to run the following commands upon starting IPython and IPython3"
+echo
+echo "    from IPython.external.mathjax import install_mathjax"
+echo "    install_mathjax()"
+echo
 
