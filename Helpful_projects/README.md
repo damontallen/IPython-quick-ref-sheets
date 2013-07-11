@@ -55,6 +55,7 @@ Interesting Examples
 * [Diplaying Chemical Compounds](http://www.reddit.com/r/IPython/comments/1fxxpj/chemistry_and_the_rdkit_library/)
 * [Javascript Animation](http://nbviewer.ipython.org/urls/raw.github.com/jakevdp/JSAnimation/master/animation_example.ipynb)
 * [Carpentry](http://nbviewer.ipython.org/5743962)
+* [Timeit magic](http://nbviewer.ipython.org/5978528)
 
 Other Resources
 ========================
