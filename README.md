@@ -17,8 +17,9 @@ SVG Images
 ###Magic Commands
 ![Magic help](http://damontallen.github.io/IPython-quick-ref-sheets/svg/Magic_only.svg)
 
-The Ipython Notebook use to develope the SVG images is [here](http://nbviewer.ipython.org/urls/raw.github.com/damontallen/IPython-quick-ref-sheets/master/SVG_Table_Builder.ipynb).  It contains a custome magic command to grab the text of the %quickref magic command.
-However, the libraries that that notebook referances are only in this git page.
+The IPython Notebook use to develop the SVG images is [here](http://nbviewer.ipython.org/urls/raw.github.com/damontallen/IPython-quick-ref-sheets/master/SVG_Table_Builder.ipynb).  
+It contains a custom magic command to grab the text of the %quickref magic command.
+However, the libraries that the notebook referances are only in this git page.
 
 (FYI The SVG files above are also available for downloading on [this github.io page](http://damontallen.github.io/IPython-quick-ref-sheets/).)
 
