@@ -1,7 +1,7 @@
 IPython-quick-ref-sheets
 ========================
 
-This is ongoing work developing quick reference sheets for IPython.  It is an
+This project represents ongoing work developing quick reference sheets for IPython.  It is an
 attempt to make several versions of the %quickref IPython magic output for ease
 of access.
 
@@ -17,16 +17,15 @@ SVG Images
 ###Magic Commands
 ![Magic help](http://damontallen.github.io/IPython-quick-ref-sheets/svg/Magic_only.svg)
 
-The IPython Notebook use to develop the SVG images is [here](http://nbviewer.ipython.org/urls/raw.github.com/damontallen/IPython-quick-ref-sheets/master/SVG_Table_Builder.ipynb).  
-It contains a custom magic command to grab the text of the %quickref magic command.
-However, the libraries that the notebook referances are only in this git page.
+The IPython Notebook used to develop the SVG images is [here](http://nbviewer.ipython.org/urls/raw.github.com/damontallen/IPython-quick-ref-sheets/master/SVG_Table_Builder.ipynb).  It contains a custom magic command to grab the text of the %quickref magic command.
+However, the libraries that the notebook references are only in this git page.
 
 (FYI The SVG files above are also available for downloading on [this github.io page](http://damontallen.github.io/IPython-quick-ref-sheets/).)
 
 Image Files
 ========================
 
-These image files are from screenshots for the HTML version of the quick referance tables.
+These image files are from screenshots for the HTML version of the quick reference tables.
 
 ![ScreenShot](https://github.com/damontallen/IPython-quick-ref-sheets/raw/master/Basic_Help.png)
 ![ScreenShot2](https://github.com/damontallen/IPython-quick-ref-sheets/raw/master/Magic_only.png)
@@ -36,10 +35,10 @@ HTML Help Tables
 ========================
 
 The HTML versions of the quick reference tables above were generated in the IPython 
-notebook. They render correctly in Chrome, but they to not in
+notebook. They render correctly in Chrome, but they do not in
 Firefox.  Despite this problem, for now, these HTML files could be modified by someone with
 more experience to make them a good reference.
-(I believe this is due to not specifying the font family but I haven't tried the modification yet.)
+(I believe the problem is due to not specifying the font family but I haven't tried the modification yet.)
 
 PDF Files
 ========================
@@ -54,12 +53,12 @@ Notebook
 ========================
 
 The IPython notebook that generated the HTML files can be viewed [here](http://nbviewer.ipython.org/urls/github.com/damontallen/IPython-quick-ref-sheets/raw/master/Qick_ref_with_library.ipynb). It 
-first takes the quickref text and converts it to a dictionary with labels for the
+first takes the %quickref text and converts it to a dictionary with labels for the
 title, headings, and comment lines, as well as the multiline examples.  A copy of
 the dictionary is saved as a binary pickle and can be downloaded from this git.
 The notebook goes on the generate HTML representations of the quickref text.
 
-Quick Referance Text
+Quick Reference Text
 ========================
 
 Originally the text file that this work is based on was generated from the IPython source code.  This
