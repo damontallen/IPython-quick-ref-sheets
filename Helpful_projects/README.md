@@ -47,6 +47,7 @@ Visual
 * [Numba: 1400x Speedup of Python code in a single line](http://jakevdp.github.io/blog/2013/06/15/numba-vs-cython-take-2/)
 * [Python Descriptors Demystified](http://nbviewer.ipython.org/urls/gist.github.com/ChrisBeaumont/5758381/raw/descriptor_writeup.ipynb)
 * [A Primer on Python Metaclasses](http://jakevdp.github.io/blog/2012/12/01/a-primer-on-python-metaclasses/)
+* [PyData 2013: Advanced Matplotlib](https://github.com/jakevdp/matplotlib_pydata2013?source=c#pydata-2013-advanced-matplotlib)
 
 Interesting Examples
 ========================
@@ -56,6 +57,8 @@ Interesting Examples
 * [Javascript Animation](http://nbviewer.ipython.org/urls/raw.github.com/jakevdp/JSAnimation/master/animation_example.ipynb)
 * [Carpentry](http://nbviewer.ipython.org/5743962)
 * [Timeit magic](http://nbviewer.ipython.org/5978528)
+* [%timeit Magic vs timeit Module (Also timeit HTML Table)](http://nbviewer.ipython.org/urls/github.com/damontallen/Timeit_magic_vs_module/raw/master/timeit_magic_vs_timeit_module.ipynb)
+* [Examples of plotting (multi-)colored lines](http://nbviewer.ipython.org/urls/raw.github.com/dpsanders/matplotlib-examples/master/colorline.ipynb)
 
 Other Resources
 ========================
