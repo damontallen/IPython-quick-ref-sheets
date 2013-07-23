@@ -59,7 +59,7 @@ def build_HTML_table(_Dict, Start_key = '', end_key='', max_line=-1, start_later
     you can take a slice out of the ordered dictionary _Dict."""
     
     Table = '<table border="1" cellpadding="3" cellspacing="0"  '
-    Table += 'style="border:1px solid black;border-collapse:collapse;font-family:verdana;font-size:13px">\n'
+    Table += 'style="border:1px solid black;border-collapse:collapse;font-family:verdana;font-size:12px">\n'
     
     comment_start = True
     show = False
