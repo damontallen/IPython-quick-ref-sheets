@@ -52,7 +52,7 @@ def right_column_check(line):
     """This function determines if the line is part of an explanation, 
     e.i. it belongs in the right-hand column"""
     #line = lines[index]
-    return (('\t' in line) or (' '*7 == line[0:7]))
+    return (('\t' in line) or (' '*4 == line[0:4]))
 
 def comment_check(lines, index, in_comment = False):
     """This fuinction determines if the line is a comment rather than an example or a subject header"""

@@ -4,7 +4,7 @@ from Build_dict import *
 #Right hand column check
 def test_multispace_Rcolumn():
     """Test that lines with multiple spaces in front are flagged to be in the right-hand column"""
-    Lines = [":",'                   ?obj, ??obj).']
+    Lines = [":",'    ?obj, ??obj).']
     assert right_column_check(Lines[1]) == True
     
 def test_tab_escape_Rcolumn():
