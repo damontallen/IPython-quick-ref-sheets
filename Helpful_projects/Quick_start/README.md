@@ -22,8 +22,10 @@ The files:
 * IPython3_dir.py
 
 Will open up file dialog boxes which you can use to open IPython in a particular 
-directory.  However you still need to use Stop IPython Notebook.sh when you are
-done to close all of the IPython processes.
+directory.  You will need to edit them to set your default path.
+
+You still need to use Stop IPython Notebook.sh when you are done to close all of
+the IPython processes.
 
 ####Update: 
 
@@ -64,3 +66,9 @@ However I guess I could have used these instead:
     sudo pip-3.2 install ipython # might not have installed IPython for Python3.3
 
 I'm also not sure if these would have installed the IPython Notebook.
+
+####Trouble Shooting
+
+The easiest way to find out why something doesn't work is to run the command from the terminal 
+and read the error messages to determine what packages are missing and/or what commands have 
+errors in them.
