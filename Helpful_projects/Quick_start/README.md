@@ -22,7 +22,7 @@ The files:
 * IPython3_dir.py
 
 Will open up file dialog boxes which you can use to open IPython in a particular 
-direcory.
+directory.
 
 ####Update: 
 
