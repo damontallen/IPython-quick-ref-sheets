@@ -30,7 +30,7 @@ done to close all of the IPython processes.
 Quick_install.sh is now out of date with the release of IPython 1.1 but a lot of
 the packages it installs still need to be installed.  My current procedure uses 
 the following apt-get commands.  I am not sure all are necessary and some might 
-be missing...
+be missing but I'm 95% sure...
 
     sudo add-apt-repository ppa:fkrull/deadsnakes
     sudo apt-get update
