@@ -2,7 +2,7 @@
 
 Download these files and run:
 
-sudo sh Quick_install.sh *-- see Update*
+sudo sh Quick_install.sh *-- out of date, see Update*
 
 It will install a bunch of packages that are often used in IPython and create
 three shortcuts on your desktop.  You may want to edit the path in the IPython 
