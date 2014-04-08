@@ -1,3 +1,12 @@
+<!DOCTYPE html>
+<html>
+
+
+
+  <body>
+
+<p>
+
 <svg viewBox="0 0 974 495" height="495">
 <rect  height="25" width="515"  style=" fill:rgb(173, 216, 230); stroke:rgb(0, 0, 0); stroke-width:1"  x="1"  y="1" />
 <text x="7" y="18" font-size= "14" font-weight = "bold" style="fill:rgb(0, 0, 0)">IPython -- An enhanced Interactive Python - Quick Reference Card</text>
@@ -166,3 +175,10 @@
 <text x="538" y="425" font-size= "12" font-weight = "normal" style="fill:rgb(0, 0, 0)">Remember: TAB completion works in many contexts, not just file names<tspan x="538" y="439">or python names.</tspan></text>
 <rect  height="8" width="445"  style=" fill:rgb(255, 255, 255); stroke:rgb(0, 0, 0); stroke-width:1"  x="528"  y="444" />
 </svg>
+
+</p>
+
+    
+
+  </body>
+</html>
