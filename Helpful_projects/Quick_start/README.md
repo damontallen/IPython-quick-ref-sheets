@@ -89,6 +89,13 @@ However I guess I could have used these instead:
 
 I'm also not sure if these would have installed the IPython Notebook.
 
+####LaTex File Conversion
+
+In order to use nbconvert to create a LaTex file or a LaTex pdf you will also need to install the following:
+
+    sudo apt-get install texlive.base
+    sudo apt-get install texlive-latex-extra
+
 ####Trouble Shooting
 
 The easiest way to find out why something doesn't work is to run the command from the terminal 
