@@ -56,10 +56,15 @@ be missing but I'm 95% sure...
     sudo apt-get install freetype* 
     sudo apt-get install python-dev
     sudo apt-get install python3-dev
+    sudo apt-get install python3.2-dev
+    sudo apt-get install numpy
+    sudo pip-3.2 install --upgrade numpy
     sudo add-apt-repository ppa:takluyver/python3
     sudo apt-get update
     sudo apt-get install python-matplotlib
     sudo apt-get install python3-matplotlib
+    sudo pip-2.7 install --upgrade matplotlib
+    sudo pip-3.2 install --upgrade matplotlib
     
     sudo apt-get install texlive # for nbconvert
     
