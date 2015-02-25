@@ -1,0 +1,10 @@
+# Backup files #
+################
+*.*~
+# Cache Files #
+###############
+*.pyc
+__pycache__/
+# Checkpoint files #
+####################
+.ipyn_checkpoints/
