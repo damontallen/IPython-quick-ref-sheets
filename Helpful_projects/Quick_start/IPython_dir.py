@@ -7,7 +7,12 @@ import sys
 
 def main():
     app = QtGui.QApplication([])
+    msgBox = QtGui.QMessageBox()
+    ver = sys.version[:3]
+    msgBox.setText("You are now starting a Python %s version of IPython."%ver)
+    msgBox.exec_()
     dialog = QtGui.QFileDialog()
+    dialog.setWindowTitle("Select Root Directory for Python %s - IPython"%ver)
     dialog.setDirectory("/home/damon/Documents/CODE/Programing/Python/IPython Notebook Folders (links)")
     dialog.setOption(QtGui.QFileDialog.ShowDirsOnly)
     dialog.setFileMode(QtGui.QFileDialog.Directory)
@@ -16,7 +21,7 @@ def main():
         directory = dialog.directory()
         print(directory.path())
         os.chdir(directory.path())
-        cmd = "ipython notebook --pylab inline"
+        cmd = "ipython notebook" # --pylab inline"
         try:
             subprocess.call(cmd,shell=True)
         except OSError:
