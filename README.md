@@ -58,7 +58,7 @@ believe that this would be a good way to generate the pdfs.
 Notebook
 ========================
 
-The IPython notebook that generated the HTML files can be viewed [here](http://nbviewer.ipython.org/urls/github.com/damontallen/IPython-quick-ref-sheets/raw/master/Qick_ref_with_library.ipynb). It 
+The IPython notebook that generated the HTML files can be viewed [here](http://nbviewer.ipython.org/urls/github.com/damontallen/IPython-quick-ref-sheets/raw/master/Quick_ref_with_library.ipynb). It 
 first takes the %quickref text and converts it to a dictionary with labels for the
 title, headings, and comment lines, as well as the multiline examples.  A copy of
 the dictionary is saved as a binary pickle and can be downloaded from this git.
