@@ -42,11 +42,11 @@ def build_dict(lines, break_at=-1):
     Quick_ref_dic = Or_dict()
     start_up = Or_dict(
         [('ipython',                        'Open IPython terminal console'),
+         ('juypter console',                'Open terminal console (4.0 and later)'),
          ('ipython qtconsole',              'Open IPython qtconsole'), 
+         ('juptyer qtconsole',              'Open qtconsole (4.0 and later)'), 
          ('ipython notebook',               'Open IPython Notebook (browser interface)'), 
-         ('ipython notebook --pylab inline','Open IPython Notebook with inline graphs'), 
-         ('ipython notebook --pylab qt',    'Open IPython Notebook with popup graphs'), 
-         ('ipython3',                       'Use the Python3 version of IPython'), 
+         ('jupyter notebook',               'Open Notebook (browser interface, 4.0 and later)'), 
          ('ipython --help-all',             'Show all IPython start flags')])
     in_comment = False
     multiline = {'In multiline':False,'column':'Left','Entry':''}
