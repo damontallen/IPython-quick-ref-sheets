@@ -49,9 +49,6 @@ width:612px;
 <tr><td >%gui</td><td>Enable&nbspor&nbspdisable&nbspIPython&nbspGUI&nbspevent&nbsploop&nbspintegration.</td></tr>
 <tr><td >%hist</td><td>Alias&nbspfor&nbsp`%history`.</td></tr>
 <tr><td >%history</td><td></td></tr>
-<tr><td >%install_default_config</td><td>%install_default_config&nbsphas&nbspbeen&nbspdeprecate&nbspand&nbspwill&nbspbe&nbspremoved&nbspin&nbspIPython&nbsp5.0.</td></tr>
-<tr><td >%install_ext</td><td>Download&nbspand&nbspinstall&nbspan&nbspextension&nbspfrom&nbspa&nbspURL,&nbspe.g.</td></tr>
-<tr><td >%install_profiles</td><td>%install_profiles&nbsphas&nbspbeen&nbspdeprecated.</td></tr>
 <tr><td >%killbgscripts</td><td>Kill&nbspall&nbspBG&nbspprocesses&nbspstarted&nbspby&nbsp%%script&nbspand&nbspits&nbspfamily.</td></tr>
 <tr><td >%ldir</td><td>Alias&nbspfor&nbsp`!ls&nbsp-F&nbsp-o&nbsp--color&nbsp%l&nbsp|&nbspgrep&nbsp/$`</td></tr>
 <tr><td >%less</td><td>Show&nbspa&nbspfile&nbspthrough&nbspthe&nbsppager.</td></tr>
@@ -67,11 +64,11 @@ width:612px;
 <tr><td >%logstate</td><td>Print&nbspthe&nbspstatus&nbspof&nbspthe&nbsplogging&nbspsystem.</td></tr>
 <tr><td >%logstop</td><td>Fully&nbspstop&nbsplogging&nbspand&nbspclose&nbsplog&nbspfile.</td></tr>
 <tr><td >%ls</td><td>Alias&nbspfor&nbsp`!ls&nbsp-F&nbsp--color`</td></tr>
+<tr><td >%lsmagic</td><td>List&nbspcurrently&nbspavailable&nbspmagic&nbspfunctions.</td></tr>
+<tr><td >%lx</td><td>Alias&nbspfor&nbsp`!ls&nbsp-F&nbsp-o&nbsp--color&nbsp%l&nbsp|&nbspgrep&nbsp^-..x`</td></tr>
 <tr><td colspan="2"; > </td></tr>
 </table></div>
 <div class="Table_1" id="Table1" style="height:auto;min_width:625px;"><table border="1" cellpadding="3" cellspacing="0"  style="border:1px solid black;border-collapse:collapse;font-family:verdana;font-size:13px">
-<tr><td >%lsmagic</td><td>List&nbspcurrently&nbspavailable&nbspmagic&nbspfunctions.</td></tr>
-<tr><td >%lx</td><td>Alias&nbspfor&nbsp`!ls&nbsp-F&nbsp-o&nbsp--color&nbsp%l&nbsp|&nbspgrep&nbsp^-..x`</td></tr>
 <tr><td >%macro</td><td>Define&nbspa&nbspmacro&nbspfor&nbspfuture&nbspre-execution.&nbspIt&nbspaccepts&nbspranges&nbspof&nbsphistory,</td></tr>
 <tr><td >%magic</td><td>Print&nbspinformation&nbspabout&nbspthe&nbspmagic&nbspfunction&nbspsystem.</td></tr>
 <tr><td >%man</td><td>Find&nbspthe&nbspman&nbsppage&nbspfor&nbspthe&nbspgiven&nbspcommand&nbspand&nbspdisplay&nbspin&nbsppager.</td></tr>
@@ -111,11 +108,11 @@ width:612px;
 <tr><td >%reset_selective</td><td>Resets&nbspthe&nbspnamespace&nbspby&nbspremoving&nbspnames&nbspdefined&nbspby&nbspthe&nbspuser.</td></tr>
 <tr><td >%rm</td><td>Alias&nbspfor&nbsp`!rm`</td></tr>
 <tr><td >%rmdir</td><td>Alias&nbspfor&nbsp`!rmdir`</td></tr>
+<tr><td >%run</td><td>Run&nbspthe&nbspnamed&nbspfile&nbspinside&nbspIPython&nbspas&nbspa&nbspprogram.</td></tr>
+<tr><td >%save</td><td>Save&nbspa&nbspset&nbspof&nbsplines&nbspor&nbspa&nbspmacro&nbspto&nbspa&nbspgiven&nbspfilename.</td></tr>
 <tr><td colspan="2"; > </td></tr>
 </table></div>
 <div class="Table_2" id="Table2" style="height:auto;min_width:612px;"><table border="1" cellpadding="3" cellspacing="0"  style="border:1px solid black;border-collapse:collapse;font-family:verdana;font-size:13px">
-<tr><td >%run</td><td>Run&nbspthe&nbspnamed&nbspfile&nbspinside&nbspIPython&nbspas&nbspa&nbspprogram.</td></tr>
-<tr><td >%save</td><td>Save&nbspa&nbspset&nbspof&nbsplines&nbspor&nbspa&nbspmacro&nbspto&nbspa&nbspgiven&nbspfilename.</td></tr>
 <tr><td >%sc</td><td>Shell&nbspcapture&nbsp-&nbsprun&nbspshell&nbspcommand&nbspand&nbspcapture&nbspoutput&nbsp(DEPRECATED&nbspuse&nbsp!).</td></tr>
 <tr><td >%set_env</td><td>Set&nbspenvironment&nbspvariables.&nbsp&nbspAssumptions&nbspare&nbspthat&nbspeither&nbsp"val"&nbspis&nbspa</td></tr>
 <tr><td >%store</td><td>Lightweight&nbsppersistence&nbspfor&nbsppython&nbspvariables.</td></tr>
@@ -140,6 +137,7 @@ width:612px;
 <tr><td >%%file</td><td>Alias&nbspfor&nbsp`%%writefile`.</td></tr>
 <tr><td >%%html</td><td>Render&nbspthe&nbspcell&nbspas&nbspa&nbspblock&nbspof&nbspHTML</td></tr>
 <tr><td >%%javascript</td><td>Run&nbspthe&nbspcell&nbspblock&nbspof&nbspJavascript&nbspcode</td></tr>
+<tr><td >%%js</td><td>Run&nbspthe&nbspcell&nbspblock&nbspof&nbspJavascript&nbspcode</td></tr>
 <tr><td >%%latex</td><td>Render&nbspthe&nbspcell&nbspas&nbspa&nbspblock&nbspof&nbsplatex</td></tr>
 <tr><td >%%perl</td><td>%%perl&nbspscript&nbspmagic</td></tr>
 <tr><td >%%prun</td><td>Run&nbspa&nbspstatement&nbspthrough&nbspthe&nbsppython&nbspcode&nbspprofiler.</td></tr>

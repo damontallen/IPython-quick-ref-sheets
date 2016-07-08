@@ -45,7 +45,7 @@ def build_dict(lines, break_at=-1):
          ('juypter console',                'Open terminal console (4.0 and later)'),
          ('ipython qtconsole',              'Open IPython qtconsole'), 
          ('juptyer qtconsole',              'Open qtconsole (4.0 and later)'), 
-         ('ipython notebook',               'Open IPython Notebook (browser interface)'), 
+         ('ipython notebook',               'Open IPython Notebook (deprecated)'), 
          ('jupyter notebook',               'Open Notebook (browser interface, 4.0 and later)'), 
          ('ipython --help-all',             'Show all IPython start flags')])
     in_comment = False

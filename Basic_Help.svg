@@ -20,7 +20,7 @@
 <line x1="170" y1="85" x2="170" y2="102" style="stroke:rgb(0, 0, 0); stroke-width:1"/>
 <rect  height="17" width="502"  style=" fill:rgb(255, 255, 255); stroke:rgb(0, 0, 0); stroke-width:1"  x="1"  y="102" />
 <text x="11" y="114" font-size= "12" font-weight = "normal" style="fill:rgb(0, 0, 0)" font-family="Arial">ipython notebook</text>
-<text x="181" y="114" font-size= "12" font-weight = "normal" style="fill:rgb(0, 0, 0)" font-family="Arial">Open IPython Notebook (browser interface)</text>
+<text x="181" y="114" font-size= "12" font-weight = "normal" style="fill:rgb(0, 0, 0)" font-family="Arial">Open IPython Notebook (deprecated)</text>
 <line x1="170" y1="102" x2="170" y2="119" style="stroke:rgb(0, 0, 0); stroke-width:1"/>
 <rect  height="17" width="502"  style=" fill:rgb(255, 255, 255); stroke:rgb(0, 0, 0); stroke-width:1"  x="1"  y="119" />
 <text x="11" y="131" font-size= "12" font-weight = "normal" style="fill:rgb(0, 0, 0)" font-family="Arial">jupyter notebook</text>
