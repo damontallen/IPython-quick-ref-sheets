@@ -1,4 +1,4 @@
-####For Ubuntu 12.04 Users.
+#### For Ubuntu 12.04 Users.
 
 Download these files and run:
 
@@ -14,7 +14,7 @@ here.
 
 (Still needs work buts gets most of the big stuff.)
 
-####New Stuff:
+#### New Stuff:
 
 The files:
 
@@ -27,7 +27,7 @@ directory.  You will need to edit them to set your default path.
 You still need to use Stop IPython Notebook.sh when you are done to close all of
 the IPython processes.
 
-####Update: 
+#### Update: 
 
 Quick_install.sh is now out of date with the release of IPython 1.1 but a lot of
 the packages it installs still need to be installed.  My current procedure uses 
@@ -94,20 +94,20 @@ However I guess I could have used these instead:
 
 I'm also not sure if these would have installed the IPython Notebook.
 
-####LaTex File Conversion
+#### LaTex File Conversion
 
 In order to use nbconvert to create a LaTex file or a LaTex pdf you will also need to install the following:
 
     sudo apt-get install texlive.base
     sudo apt-get install texlive-latex-extra
 
-####Trouble Shooting
+#### Trouble Shooting
 
 The easiest way to find out why something doesn't work is to run the command from the terminal 
 and read the error messages to determine what packages are missing and/or what commands have 
 errors in them.
 
-###Final Note on Executing Scripts and Programs
+### Final Note on Executing Scripts and Programs
 
 In order to be able to run a script by clicking on it you will need to enable nautilus within dconfg-editor.
 The followinf instructions were written by Basharat Sial [here](http://askubuntu.com/questions/138908/how-to-execute-a-script-just-by-double-clicking-like-exe-files-in-windows).
